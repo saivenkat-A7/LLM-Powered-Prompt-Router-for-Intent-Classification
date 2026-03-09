@@ -479,12 +479,91 @@ h3 {
     }
 }
 
-@media (max-width: 768px) {
-    .expertise-grid {
-        grid-template-columns: 1fr 1fr;
+/* Mobile Responsive Improvements */
+@media (max-width: 600px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .app-container {
+        height: auto;
+    }
+
+    .glass-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .chat-area {
+        padding: 1rem;
+    }
+
+    .chat-history {
+        gap: 1rem;
+    }
+
+    .message {
+        max-width: 95%;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .welcome-screen {
+        padding: 1rem;
     }
 
     .welcome-screen h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .welcome-screen p {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .expert-card {
+        padding: 1rem;
+    }
+
+    .expert-icon {
+        font-size: 2rem;
+    }
+
+    .input-area {
+        padding: 1rem;
+    }
+
+    .input-wrapper {
+        padding: 0.6rem 0.8rem;
+    }
+
+    #user-input {
+        font-size: 0.9rem;
+    }
+
+    #send-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .fab {
+        width: 48px;
+        height: 48px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+        margin: 1rem;
     }
 }
