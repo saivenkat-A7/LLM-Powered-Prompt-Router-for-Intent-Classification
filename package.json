@@ -1,0 +1,32 @@
+{
+  "name": "llm-prompt-router",
+  "version": "1.0.0",
+  "description": "An LLM-Powered Prompt Router for Intent Classification - routes user messages to specialized AI expert personas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "jest --testEnvironment=node --forceExit --detectOpenHandles",
+    "test:coverage": "jest --coverage --testEnvironment=node --forceExit",
+    "cli": "node src/cli.js"
+  },
+  "keywords": [
+    "llm",
+    "openai",
+    "prompt-router",
+    "intent-classification",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.2.2"
+  }
+}

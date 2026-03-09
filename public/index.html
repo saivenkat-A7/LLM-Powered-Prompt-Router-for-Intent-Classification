@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Prompt Router | Expert Intent Classification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="logo">
+                <span class="icon">🚀</span>
+                <h1>Prompt<span>Router</span></h1>
+            </div>
+            <div id="status-badge" class="badge">System Ready</div>
+        </header>
+
+        <main class="chat-area">
+            <div id="welcome-screen" class="welcome-screen">
+                <h2>How can I help you today?</h2>
+                <p>I route your requests to specialized expert personas for high-quality results.</p>
+                <div class="expertise-grid">
+                    <div class="expert-card" data-intent="code">
+                        <span class="expert-icon">🧑‍💻</span>
+                        <h3>Code Expert</h3>
+                        <p>Production-quality code & debugging</p>
+                    </div>
+                    <div class="expert-card" data-intent="data">
+                        <span class="expert-icon">📊</span>
+                        <h3>Data Analyst</h3>
+                        <p>Stats, patterns & visualization</p>
+                    </div>
+                    <div class="expert-card" data-intent="writing">
+                        <span class="expert-icon">✍️</span>
+                        <h3>Writing Coach</h3>
+                        <p>Clarity, tone & structure</p>
+                    </div>
+                    <div class="expert-card" data-intent="career">
+                        <span class="expert-icon">💼</span>
+                        <h3>Career Advisor</h3>
+                        <p>Actionable career & resume tips</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-history" class="chat-history hidden">
+                <!-- Messages will be injected here -->
+            </div>
+        </main>
+
+        <footer class="input-area glass-footer">
+            <div class="input-container">
+                <div id="active-persona" class="active-persona hidden">
+                    <span id="persona-icon"></span>
+                    <span id="persona-label"></span>
+                    <span id="persona-confidence"></span>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Type your message here... Use @intent to override" rows="1"></textarea>
+                    <button id="send-btn" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+            </div>
+            <p class="hint">Tip: Use <code>@code</code>, <code>@data</code>, etc. to manually route your request.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for Logs/History -->
+    <div id="logs-modal" class="modal hidden">
+        <div class="modal-content glass">
+            <header>
+                <h2>Interaction History</h2>
+                <button id="close-logs">&times;</button>
+            </header>
+            <div id="logs-container">
+                <!-- Logs will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <button id="view-logs-btn" class="fab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+
+# Docker volume mount directory (auto-created at runtime)
+logs/
