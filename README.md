@@ -2,27 +2,10 @@
 
 An intelligent **Node.js** service that classifies a user's message intent and routes it to a specialized AI expert persona — producing sharper, more focused responses than a single generic system prompt ever could.
 
-Built for the [Partnr Network Global Placement Program](https://app.partnr.network/global-placement-program/tasks/6bb73497a3bb4bf7b828) mandatory task.
 
 ---
 
-## Table of Contents
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Quick Start — Docker (Recommended)](#quick-start--docker-recommended)
-- [Quick Start — Local Node.js](#quick-start--local-nodejs)
-- [API Reference](#api-reference)
-- [Expert Personas](#expert-personas)
-- [Configuration](#configuration)
-- [Testing](#testing)
-- [Logging](#logging)
-- [Stretch Goals](#stretch-goals)
-- [Submission Checklist](#submission-checklist)
-
----
 
 ## Overview
 
@@ -520,20 +503,3 @@ for i in range(10):
 ──────────────────────────────────────────────────
 ```
 
----
-
-## Submission Checklist
-
-- [x] Application code — full Node.js source in `src/`
-- [x] `Dockerfile` — multi-stage production build (node:20-alpine, non-root user)
-- [x] `docker-compose.yml` — with log volume persistence
-- [x] `README.md` — setup, architecture, API reference, test table
-- [x] `.env.example` — all environment variables documented, no secrets
-- [x] `route_log.jsonl` — sample log from 15 spec test messages
-- [x] `tests/router.test.js` — 33 Jest tests, all passing
-
----
-
-## License
-
-ISC © 2026
