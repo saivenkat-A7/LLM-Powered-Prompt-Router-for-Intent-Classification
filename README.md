@@ -374,8 +374,8 @@ To use the service without incurring costs, you can route requests through **Ope
    ```env
    OPENAI_API_KEY=gsk_your_key_here
    OPENAI_BASE_URL=https://api.groq.com/openai/v1
-   CLASSIFIER_MODEL=llama3-8b-8192
-   RESPONDER_MODEL=llama3-8b-8192
+   CLASSIFIER_MODEL=llama-3.1-8b-instant
+   RESPONDER_MODEL=llama-3.1-8b-instant
    ```
 
 ### 2. OpenRouter (Wide Variety)
@@ -404,11 +404,11 @@ Copy `.env.example` to `.env` and set these variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `OPENAI_API_KEY` | *(required)* | Your OpenAI API key |
+| `OPENAI_API_KEY` | *(required)* | Your groq API key |
 | `PORT` | `3000` | HTTP server port |
 | `CONFIDENCE_THRESHOLD` | `0.7` | Min confidence to accept a non-unclear intent |
-| `CLASSIFIER_MODEL` | `gpt-4o-mini` | Model for intent classification |
-| `RESPONDER_MODEL` | `gpt-4o-mini` | Model for expert responses |
+| `CLASSIFIER_MODEL` | `llama-3.1-8b-instant` | Model for intent classification |
+| `RESPONDER_MODEL` | `llama-3.1-8b-instant` | Model for expert responses |
 | `LOG_FILE` | `route_log.jsonl` | Path to interaction log file |
 
 > **Never commit your `.env` file or API keys to version control.**
